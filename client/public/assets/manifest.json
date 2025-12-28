@@ -1,0 +1,86 @@
+{
+  "version": "0.1",
+  "assets": {
+    "furniture": {
+      "의자": { "path": "furniture/chair.glb", "keywords": ["chair", "의자", "체어"] },
+      "의자_고급": { "path": "furniture/chair_damask.glb", "keywords": ["damask chair", "고급의자", "앤틱의자"] },
+      "소파": { "path": "furniture/sofa.glb", "keywords": ["sofa", "소파", "쇼파", "couch"] },
+      "가죽소파": { "path": "furniture/leather_sofa.glb", "keywords": ["leather sofa", "가죽소파", "가죽쇼파"] },
+      "푸프": { "path": "furniture/pouf.glb", "keywords": ["pouf", "푸프", "오토만", "ottoman"] },
+      "박스": { "path": "furniture/box.glb", "keywords": ["box", "박스", "상자"] },
+      "큐브": { "path": "furniture/cube.glb", "keywords": ["cube", "큐브", "정육면체"] }
+    },
+    "lighting": {
+      "램프": { "path": "lighting/lamp.glb", "keywords": ["lamp", "램프", "조명", "전등"] },
+      "랜턴": { "path": "lighting/lantern.glb", "keywords": ["lantern", "랜턴", "등불"] },
+      "반램프": { "path": "lighting/barn_lamp.glb", "keywords": ["barn lamp", "반램프", "창고등"] },
+      "스테인드글라스_램프": { "path": "lighting/stained_glass_lamp.glb", "keywords": ["stained glass lamp", "스테인드글라스", "스탠드"] }
+    },
+    "decor": {
+      "시계": { "path": "decor/watch.glb", "keywords": ["watch", "시계", "손목시계"] },
+      "카메라": { "path": "decor/antique_camera.glb", "keywords": ["camera", "카메라", "앤틱카메라"] },
+      "물병": { "path": "decor/water_bottle.glb", "keywords": ["water bottle", "물병", "병"] },
+      "붐박스": { "path": "decor/boombox.glb", "keywords": ["boombox", "붐박스", "라디오", "카세트"] },
+      "체스": { "path": "decor/chess_set.glb", "keywords": ["chess", "체스", "체스판"] },
+      "선글라스": { "path": "decor/sunglasses.glb", "keywords": ["sunglasses", "선글라스", "안경"] },
+      "해골": { "path": "decor/skull.glb", "keywords": ["skull", "해골", "두개골"] },
+      "용": { "path": "decor/dragon.glb", "keywords": ["dragon", "용", "드래곤"] },
+      "헬멧": { "path": "decor/scifi_helmet.glb", "keywords": ["helmet", "헬멧", "투구"] },
+      "군인": { "path": "decor/soldier.glb", "keywords": ["soldier", "군인", "병사", "사람"] },
+      "로봇": { "path": "decor/robot.glb", "keywords": ["robot", "로봇"] },
+      "우주인": { "path": "decor/astronaut.gltf", "keywords": ["astronaut", "우주인", "우주비행사"] },
+      "여우": { "path": "decor/fox.glb", "keywords": ["fox", "여우"] },
+      "말": { "path": "decor/horse.glb", "keywords": ["horse", "말"] },
+      "앵무새": { "path": "decor/parrot.glb", "keywords": ["parrot", "앵무새", "새"] },
+      "플라밍고": { "path": "decor/flamingo.glb", "keywords": ["flamingo", "플라밍고", "홍학"] },
+      "황새": { "path": "decor/stork.glb", "keywords": ["stork", "황새"] },
+      "물고기": { "path": "decor/fish.glb", "keywords": ["fish", "물고기", "생선"] },
+      "강아지": { "path": "decor/dog.gltf", "keywords": ["dog", "강아지", "개"] },
+      "고양이": { "path": "decor/cat.gltf", "keywords": ["cat", "고양이"] },
+      "사과": { "path": "decor/apple.gltf", "keywords": ["apple", "사과"] },
+      "바나나": { "path": "decor/banana.gltf", "keywords": ["banana", "바나나"] },
+      "오렌지": { "path": "decor/orange.gltf", "keywords": ["orange", "오렌지"] },
+      "아보카도": { "path": "decor/avocado.glb", "keywords": ["avocado", "아보카도"] },
+      "버섯": { "path": "decor/mushroom.gltf", "keywords": ["mushroom", "버섯"] },
+      "선인장": { "path": "decor/cactus.gltf", "keywords": ["cactus", "선인장", "식물"] },
+      "꽃": { "path": "decor/flower.gltf", "keywords": ["flower", "꽃", "화분"] },
+      "열쇠": { "path": "decor/key.gltf", "keywords": ["key", "열쇠"] },
+      "보석": { "path": "decor/gem.gltf", "keywords": ["gem", "보석", "다이아몬드"] },
+      "동전": { "path": "decor/coin.gltf", "keywords": ["coin", "동전", "코인"] },
+      "별": { "path": "decor/star.gltf", "keywords": ["star", "별"] },
+      "하트": { "path": "decor/heart.gltf", "keywords": ["heart", "하트", "하트모양"] },
+      "장난감차": { "path": "decor/toycar.glb", "keywords": ["toy car", "장난감차", "미니카"] },
+      "네페르티티": { "path": "decor/nefertiti.glb", "keywords": ["nefertiti", "네페르티티", "조각상", "흉상"] },
+      "오리": { "path": "decor/duck2.gltf", "keywords": ["duck", "오리"] }
+    },
+    "kitchen": {
+      "냉장고": { "path": "kitchen/commercial_fridge.glb", "keywords": ["refrigerator", "냉장고", "fridge"] },
+      "컵": { "path": "kitchen/cup.gltf", "keywords": ["cup", "컵", "머그컵"] },
+      "와인잔": { "path": "kitchen/wine_glass.gltf", "keywords": ["wine glass", "와인잔", "유리잔"] },
+      "병": { "path": "kitchen/bottle.gltf", "keywords": ["bottle", "병", "술병"] },
+      "피자": { "path": "kitchen/pizza.gltf", "keywords": ["pizza", "피자"] },
+      "햄버거": { "path": "kitchen/hamburger.gltf", "keywords": ["hamburger", "햄버거", "버거"] },
+      "도넛": { "path": "kitchen/donut.gltf", "keywords": ["donut", "도넛", "도너츠"] }
+    },
+    "outdoor": {
+      "나무": { "path": "outdoor/tree.gltf", "keywords": ["tree", "나무"] },
+      "구름": { "path": "outdoor/cloud.gltf", "keywords": ["cloud", "구름"] },
+      "달": { "path": "outdoor/moon.gltf", "keywords": ["moon", "달"] },
+      "지구": { "path": "outdoor/earth.gltf", "keywords": ["earth", "지구"] },
+      "로켓": { "path": "outdoor/rocket.gltf", "keywords": ["rocket", "로켓", "우주선"] },
+      "자동차": { "path": "outdoor/car_concept.glb", "keywords": ["car", "자동차", "차"] },
+      "페라리": { "path": "outdoor/ferrari.glb", "keywords": ["ferrari", "페라리", "스포츠카"] },
+      "트럭": { "path": "outdoor/milk_truck.glb", "keywords": ["truck", "트럭"] }
+    },
+    "structure": {
+      "도쿄씬": { "path": "structure/tokyo_scene.glb", "keywords": ["tokyo", "도쿄", "일본거리"] },
+      "가상도시": { "path": "structure/virtual_city.glb", "keywords": ["city", "도시", "빌딩"] },
+      "스폰자": { "path": "structure/sponza.gltf", "keywords": ["sponza", "스폰자", "궁전", "회랑"] }
+    }
+  },
+  "defaults": {
+    "character": "decor/soldier.glb",
+    "prop": "furniture/box.glb",
+    "unknown": "furniture/cube.glb"
+  }
+}

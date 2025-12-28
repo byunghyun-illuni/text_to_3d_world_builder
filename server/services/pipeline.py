@@ -7,9 +7,12 @@ import sys
 import os
 from pathlib import Path
 
-# TRELLIS.2 submodule 경로 추가
-TRELLIS2_PATH = Path(__file__).parent.parent.parent / "trellis2"
+# 경로 추가
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+TRELLIS2_PATH = PROJECT_ROOT / "trellis2"
+SCRIPTS_PATH = PROJECT_ROOT / "scripts"
 sys.path.insert(0, str(TRELLIS2_PATH))
+sys.path.insert(0, str(SCRIPTS_PATH))
 
 # 환경 변수 설정
 os.environ['OPENCV_IO_ENABLE_OPENEXR'] = '1'

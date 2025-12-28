@@ -23,7 +23,7 @@ from pathlib import Path
 # ============================================================================
 
 # Gemini API 키 (환경변수 또는 직접 설정)
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyDkWekd121LK4QNQwlGiYDqe0Z5QGdanIw")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # 로컬 모델 경로 (ModelScope에서 다운로드된 경로)
 DINOV3_LOCAL_PATH = "/home/byunghyun/.cache/modelscope/facebook/dinov3-vitl16-pretrain-lvd1689m"

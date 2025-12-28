@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment
+.env
+.env.local
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Misc
+*.bak
+*.tmp
+
+# Generated 3D assets
+assets/models/*.glb
+assets/models/*.obj
+assets/images/*.png
+assets/images/*.jpg
+
+# Model cache (ModelScope, HuggingFace)
+*.safetensors
+*.bin
+*.pt
+*.pth

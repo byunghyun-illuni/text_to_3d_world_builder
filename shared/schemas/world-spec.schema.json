@@ -1,0 +1,186 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorldSpec",
+  "description": "3D World Specification",
+  "type": "object",
+  "required": ["version", "name", "space", "spawnpoint", "entities"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "스키마 버전"
+    },
+    "name": {
+      "type": "string",
+      "description": "월드 이름"
+    },
+    "space": {
+      "type": "object",
+      "description": "공간 정의",
+      "required": ["type", "size"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["room"]
+        },
+        "size": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "[width, height, depth] in meters"
+        }
+      }
+    },
+    "spawnpoint": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "[x, y, z] 시작 위치"
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/definitions/PrimitiveEntity" },
+          { "$ref": "#/definitions/GlbEntity" },
+          { "$ref": "#/definitions/SplatEntity" }
+        ]
+      }
+    },
+    "zones": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Zone"
+      }
+    }
+  },
+  "definitions": {
+    "Vector3": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "BaseEntity": {
+      "type": "object",
+      "required": ["id", "position"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "고유 식별자"
+        },
+        "name": {
+          "type": "string",
+          "description": "표시 이름"
+        },
+        "position": {
+          "$ref": "#/definitions/Vector3"
+        },
+        "rotation": {
+          "$ref": "#/definitions/Vector3",
+          "description": "[x, y, z] rotation in radians"
+        },
+        "scale": {
+          "$ref": "#/definitions/Vector3"
+        }
+      }
+    },
+    "PrimitiveEntity": {
+      "allOf": [
+        { "$ref": "#/definitions/BaseEntity" },
+        {
+          "type": "object",
+          "required": ["assetType", "primitive"],
+          "properties": {
+            "assetType": {
+              "const": "primitive"
+            },
+            "primitive": {
+              "type": "string",
+              "enum": ["box", "plane", "capsule", "sphere", "cylinder"],
+              "description": "프리미티브 타입"
+            },
+            "size": {
+              "$ref": "#/definitions/Vector3",
+              "description": "프리미티브 크기"
+            },
+            "color": {
+              "type": "string",
+              "description": "색상 (hex)"
+            },
+            "role": {
+              "type": "string",
+              "enum": ["character", "prop", "structure"],
+              "description": "엔티티 역할"
+            }
+          }
+        }
+      ]
+    },
+    "GlbEntity": {
+      "allOf": [
+        { "$ref": "#/definitions/BaseEntity" },
+        {
+          "type": "object",
+          "required": ["assetType", "src"],
+          "properties": {
+            "assetType": {
+              "const": "glb"
+            },
+            "src": {
+              "type": "string",
+              "description": "GLB 파일 경로"
+            },
+            "role": {
+              "type": "string",
+              "enum": ["character", "prop", "structure"]
+            }
+          }
+        }
+      ]
+    },
+    "SplatEntity": {
+      "allOf": [
+        { "$ref": "#/definitions/BaseEntity" },
+        {
+          "type": "object",
+          "required": ["assetType", "src"],
+          "properties": {
+            "assetType": {
+              "const": "splat"
+            },
+            "src": {
+              "type": "string",
+              "description": "Splat 파일 경로"
+            },
+            "format": {
+              "type": "string",
+              "enum": ["ply", "splat", "ksplat", "spz"],
+              "description": "Splat 포맷"
+            }
+          }
+        }
+      ]
+    },
+    "Zone": {
+      "type": "object",
+      "required": ["id", "name", "bounds"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "bounds": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Vector3" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[[x1, y1, z1], [x2, y2, z2]]"
+        }
+      }
+    }
+  }
+}

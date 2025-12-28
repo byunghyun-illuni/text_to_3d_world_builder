@@ -1,0 +1,16 @@
+# FastAPI 서버
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+python-multipart>=0.0.6
+
+# AI APIs
+openai>=1.0.0
+google-genai>=1.0.0
+
+# ModelScope (gated 모델 다운로드용)
+modelscope>=1.0.0
+
+# Note: TRELLIS.2 의존성은 conda 환경에서 별도 관리
+# cd trellis2 && . ./setup.sh --basic --flash-attn --nvdiffrast --nvdiffrec --cumesh --o-voxel --flexgemm
